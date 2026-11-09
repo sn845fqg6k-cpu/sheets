@@ -6,4 +6,4 @@
 	url = git@github.com:CasualOffice/design-book.git
 [submodule "apps/server"]
 	path = apps/server
-	url = git@github.com:CasualOffice/collab.git
+	url = https://github.com/sn845fqg6k-cpu/collab.git

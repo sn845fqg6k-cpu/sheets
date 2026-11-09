@@ -41,6 +41,28 @@ usual. The pinned submodule commits (`apps/server`, `vendor/univer-revamp`,
 Prefer `git merge` over `git rebase` once the fork has its own commits: rebasing
 rewrites shared history and makes upstream pulls harder to audit.
 
+## Server submodule (`apps/server`)
+
+`apps/server` is a submodule of
+[`sn845fqg6k-cpu/collab`](https://github.com/sn845fqg6k-cpu/collab), forked from
+[`CasualOffice/collab`](https://github.com/CasualOffice/collab). The fork carries our
+server changes; inside the submodule `origin` is the fork and `upstream` is
+CasualOffice.
+
+Sync server changes from upstream:
+
+```bash
+git -C apps/server fetch upstream
+git -C apps/server merge upstream/main
+git -C apps/server push origin main
+
+git add apps/server
+git commit -m "chore: bump collab server"
+```
+
+Changes made inside `apps/server` must be committed and pushed from the submodule
+first; the parent repository only records the new commit SHA.
+
 ## Push to the fork
 
 ```bash
