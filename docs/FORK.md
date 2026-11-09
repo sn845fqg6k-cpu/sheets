@@ -13,6 +13,13 @@ maintained at [`sn845fqg6k-cpu/sheets`](https://github.com/sn845fqg6k-cpu/sheets
 Both use HTTPS. The submodules in `.gitmodules` still use SSH URLs; see
 [Submodule access](#submodule-access) if the machine has no GitHub SSH key.
 
+On a fresh clone of the fork, add `upstream` once:
+
+```bash
+git remote add upstream https://github.com/CasualOffice/sheets.git
+git fetch upstream
+```
+
 ## Sync from upstream
 
 ```bash
