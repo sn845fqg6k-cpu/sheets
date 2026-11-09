@@ -10,7 +10,8 @@ maintained at [`sn845fqg6k-cpu/sheets`](https://github.com/sn845fqg6k-cpu/sheets
 | `origin` | `https://github.com/sn845fqg6k-cpu/sheets.git` | push local work |
 | `upstream` | `https://github.com/CasualOffice/sheets.git` | pull upstream changes |
 
-Both use HTTPS. The submodules in `.gitmodules` still use SSH URLs; see
+Both use HTTPS. `apps/server` now points at the personal collab fork over HTTPS;
+the two `vendor/` submodules still use SSH URLs. See
 [Submodule access](#submodule-access) if the machine has no GitHub SSH key.
 
 On a fresh clone of the fork, add `upstream` once:
@@ -80,8 +81,8 @@ To contribute a change back, open a PR from
 
 ## Submodule access
 
-`.gitmodules` points at `git@github.com:...` URLs. On a machine without a GitHub
-SSH key, clone them with a one-shot HTTPS rewrite:
+The `vendor/*` entries point at `git@github.com:...` URLs. On a machine without
+a GitHub SSH key, clone them with a one-shot HTTPS rewrite:
 
 ```bash
 git -c url."https://github.com/".insteadOf="git@github.com:" \
