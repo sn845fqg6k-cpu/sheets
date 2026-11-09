@@ -49,6 +49,12 @@ rewrites shared history and makes upstream pulls harder to audit.
 server changes; inside the submodule `origin` is the fork and `upstream` is
 CasualOffice.
 
+On a fresh clone, add the server upstream once:
+
+```bash
+git -C apps/server remote add upstream https://github.com/CasualOffice/collab.git
+```
+
 Sync server changes from upstream:
 
 ```bash
